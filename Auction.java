@@ -101,4 +101,22 @@ public class Auction
             return null;
         }
     }
+    
+   
+    public void close()
+    {
+        for (Lot lot : lots)
+        {
+            if (lot.getHighestBid() != null)
+            {
+                System.out.println(lot.toString() + lot.getHighestBid().getBidder().getName());
+            }
+            else
+            {
+                System.out.println("No ha habido pujas");
+            }
+        }
+    }
+    
+    
 }
